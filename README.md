@@ -19,3 +19,6 @@
 EvoX Engine is still in its early development stages. While it provides core features for building 2D games, there’s much more to come! Future updates will include additional systems like physics, extended content management, an editor, and more.
 
 Feel free to check out the source code, contribute, or simply use it as a starting point for your own projects!
+
+
+EvoX Engine is inspired by the [Ludos Engine](https://github.com/adamgustafsson/Ludos.Engine) made by @adamgustafsson
