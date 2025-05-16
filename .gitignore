@@ -1,0 +1,42 @@
+# .NET Core / .NET 5+ files
+bin/
+obj/
+
+# User-specific files
+*.user
+*.vspscc
+.vs/
+.idea/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files (installer packages)
+*.exe
+*.dll
+*.pdb
+
+# JetBrains Rider project files
+.idea/
+
+# VS Code config folder
+.vscode/
+
+# Thumbnails
+Thumbs.db
+
+# Windows Installer logs
+*.log
+
+# JetBrains Rider & ReSharper files
+.idea/
+.reSharper/
+
+# MacOS Finder
+.DS_Store
+
+# Linux system files
+*~
