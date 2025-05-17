@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="MonoGame.Framework.WindowsDX" Version="3.8.3" />
+    <PackageVersion Include="MonoGame.Content.Builder.Task" Version="3.8.3" />
+    <PackageVersion Include="Nopipeline.Task" Version="2.3.0" />
+  </ItemGroup>
+</Project>

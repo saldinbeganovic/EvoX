@@ -40,3 +40,7 @@ Thumbs.db
 
 # Linux system files
 *~
+
+#Monogame
+.mgcb
+.mgstats
