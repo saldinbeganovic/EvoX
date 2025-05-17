@@ -1,0 +1,27 @@
+<Project>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>Latest</LangVersion>
+		<RootNamespace>EvoX</RootNamespace>
+		<RootNamespace>EvoX.$(MSBuildProjectName)</RootNamespace>
+		<AssemblyName>EvoX.$(MSBuildProjectName)</AssemblyName>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Year>$([System.DateTime]::UtcNow.Year)</Year>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Version>$(BUILD_BUILDNUMBER)</Version>
+		<Company>EVOX</Company>
+		<Product>$(MSBuildProjectName)</Product>
+		<Copyright>Copyright © EVOX $(Year)</Copyright>
+		<Authors>Saldin Beganovic</Authors>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<SignAssembly>false</SignAssembly>
+	</PropertyGroup>
+</Project>

@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RollForward>Major</RollForward>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <TieredCompilation>false</TieredCompilation>
+	<OutputPath>$(SolutionDir)..\bin\$(Configuration)\Hexbound</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Content\bin\**" />
+    <Compile Remove="Content\obj\**" />
+    <EmbeddedResource Remove="Content\bin\**" />
+    <EmbeddedResource Remove="Content\obj\**" />
+    <None Remove="Content\bin\**" />
+    <None Remove="Content\obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.WindowsDX" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" />
+    <PackageReference Include="Nopipeline.Task" />
+  </ItemGroup>
+  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+    <Message Text="Restoring dotnet tools" Importance="High" />
+    <Exec Command="dotnet tool restore" />
+  </Target>
+  <ItemGroup>
+    <NPLContentReferences Remove="Content\obj\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <MGCBContentReferences Remove="Content\obj\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <NPLContentReferences Remove="Content\bin\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <MGCBContentReferences Remove="Content\bin\**" />
+  </ItemGroup>
+
+
+</Project>
