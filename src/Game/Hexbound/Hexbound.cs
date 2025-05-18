@@ -3,14 +3,18 @@ using EvoX.Engine.Core;
 using EvoX.Hexbound.Controller;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using NLog;
 
 namespace EvoX.Hexbound;
 public class Hexbound : EvoXGame
 {
+    private readonly Logger _logger = LogManager.GetCurrentClassLogger();
+
     public static bool DoExitGame { get; set; }
 
     public Hexbound() : base(graphicsScale: 4)
     {
+        _logger.Debug("Initializing...");
         this.Content.RootDirectory = "Content";
         this.IsMouseVisible = true;
     }

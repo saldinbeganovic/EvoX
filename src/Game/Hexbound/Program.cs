@@ -1,7 +1,6 @@
 ﻿
 using EvoX.Engine.Utilities;
 using EvoX.Hexbound;
-using Microsoft.Xna.Framework;
 using NLog;
 
 class Program
@@ -22,7 +21,7 @@ class Program
         _logger.Info("Application starting at {time}...", DateTime.Now);
 
         _game = new Hexbound();
-        _game.Exiting += GameShuttingDown;
+        _game.Exiting += (s, e) => { Shutdown(); };
         _game.Window.Title = "Hexbound";              
 
         try
@@ -34,11 +33,6 @@ class Program
             _logger.Fatal(ex, "Unhandled exception occurred. The application will shut down.");
             Shutdown(isCrash: true);
         }
-    }
-
-    private static void GameShuttingDown(object? sender, ExitingEventArgs e)
-    {
-        Shutdown();
     }
 
     private static void Shutdown(bool isCrash = false)
