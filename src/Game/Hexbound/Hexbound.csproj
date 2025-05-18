@@ -5,7 +5,7 @@
     <RollForward>Major</RollForward>
     <PublishReadyToRun>false</PublishReadyToRun>
     <TieredCompilation>false</TieredCompilation>
-	<OutputPath>$(SolutionDir)..\bin\$(Configuration)\Hexbound</OutputPath>
+	<OutputPath>$(SolutionDir)\bin\$(Configuration)\Hexbound</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -23,6 +23,7 @@
   <ItemGroup>
     <PackageReference Include="MonoGame.Framework.WindowsDX" />
     <PackageReference Include="MonoGame.Content.Builder.Task" />
+    <PackageReference Include="NLog" />
     <PackageReference Include="Nopipeline.Task" />
   </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
@@ -40,6 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <MGCBContentReferences Remove="Content\bin\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Engine\Engine.Common\Engine.Common.csproj" />
+    <ProjectReference Include="..\..\Engine\Engine.Core\Engine.Core.csproj" />
+    <ProjectReference Include="..\..\Engine\Engine.Utilities\Engine.Utilities.csproj" />
   </ItemGroup>
 
 
